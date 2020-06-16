@@ -1,4 +1,4 @@
-<% content_for :page_title, "Welcome" %>
+<% content_for :page_title,  "Index" %>
 
 <div class="section">
   <div class="container">
@@ -7,14 +7,14 @@
       <div class="card-content">
         <div class="media">
           <div class="media-content">
-            <p class="title is-4"><%= link_to post.title, post %></p>
+            <p class="title is-4"><%= link_to post.title, post  %></p>
           </div>
         </div>
         <div class="content">
           <%= post.content %>
         </div>
         <div class="comment-count">
-          <span class="tag is-rounded"></span>
+          <span class="tag is-rounded"><%= post.comments.count %> comments</span>
         </div>
       </div>
     </div>
